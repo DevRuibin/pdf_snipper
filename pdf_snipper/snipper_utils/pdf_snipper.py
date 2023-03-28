@@ -1,9 +1,6 @@
-from sys import exit
-
-import argparse
 import os
+
 from PyPDF2 import PdfWriter, PdfReader
-from termcolor import colored
 
 from pdf_snipper import utils
 from pdf_snipper.snipper_error.handler import Handler

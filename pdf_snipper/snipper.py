@@ -1,13 +1,14 @@
 from pdf_snipper.snipper_error.handler import Handler
 from pdf_snipper.snipper_utils.pdf_snipper import PdfSnipper
 from pdf_snipper.snipper_utils.pdf_merge import PdfMerge
+from pdf_snipper.snipper_utils.pdf_bookmark import PdfBookmark
 import argparse
 
 
 def main():
 
     # Map command to respective class
-    tool_classes = {'snipper': PdfSnipper, 'merge': PdfMerge}
+    tool_classes = {'snipper': PdfSnipper, 'merge': PdfMerge, 'bookmark': PdfBookmark}
 
     # Create the main argument parser
     parser = argparse.ArgumentParser(description='PDF Snipper - command-line PDF manipulation tool')
@@ -27,6 +28,14 @@ def main():
     merge_parser.add_argument('-i', '--input', nargs='+', dest='pdf_files', type=str, required=True,
                               help='List of paths to the input PDF files')
     merge_parser.add_argument('-o', '--output', dest='output_file', type=str, help='Path to the output PDF file')
+
+    # Create parser for 'bookmark' command
+    bookmark_parser = subparsers.add_parser('bookmark', help='Bookmark operations')
+    bookmark_parser.add_argument('-i', '--input', dest='pdf_file', type=str, help='Path to the input PDF file')
+    bookmark_parser.add_argument('-o', '--output', dest='output_file', type=str, help='Path to the output PDF file')
+    bookmark_parser.add_argument('-m', '--bookmark', dest='bookmark', action='store_true', help='Bookmark to add')
+    bookmark_parser.add_argument('-M', '--max_level', dest='max_level', type=int, help='Maximum bookmark level')
+
 
     # Parse the command-line arguments
     args = parser.parse_args()
