@@ -1,13 +1,20 @@
 #!/bin/bash
 
+
+# Navigate to the directory containing the shell script
+cd /path/to/directory
+
 # Install PyInstaller
 pip install pyinstaller
 
-# Navigate to the directory containing the Python script
-cd /path/to/directory
+# Install the dependencies
+pip install -r requirements.txt
 
-# Package the script and its dependencies into a standalone executable
-pyinstaller --onefile pdf_snipper.py
+pyinstaller pdf_snipper/__main__.py --name snipper --onefile
 
-# Create a symlink to the executable file in /usr/local/bin
-sudo ln -s $(pwd)/dist/pdf_snipper /usr/local/bin/pdf_snipper
+# Navigate to the dist directory
+cd dist
+
+# Run the executable
+./snipper
+
