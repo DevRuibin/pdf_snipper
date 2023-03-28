@@ -7,7 +7,7 @@ PDF Snipper is a command-line tool for extracting a range of pages from a PDF fi
 To install PDF Snipper, simply download the `pdf_snipper.py` file and place it in a directory of your choice. You can then run the tool using the command:
 
 ```bash
-python pdf_snipper.py --help
+python pdf_snipper --help
 ```
 
 ## Usage
@@ -15,7 +15,7 @@ python pdf_snipper.py --help
 To use PDF Snipper, run the command:
 
 ```bash
-pdf_snipper.py --start_page START_PAGE --end_page END_PAGE --input PDF_FILE_PATH [--output OUTPUT_FILE_PATH]
+python pdf_snipper snipper  --start_page START_PAGE --end_page END_PAGE --input PDF_FILE_PATH [--output OUTPUT_FILE_PATH]
 ```
 
 - `START_PAGE`: the starting page number to extract (inclusive).
@@ -28,13 +28,13 @@ pdf_snipper.py --start_page START_PAGE --end_page END_PAGE --input PDF_FILE_PATH
 Extract pages 5-10 from the input PDF file and save as a new file:
 
 ```bash
-pdf_snipper.py --start_page 5 --end_page 10 --input input.pdf --output output.pdf
+python pdf_snipper snipper --start_page 5 --end_page 10 --input input.pdf --output output.pdf
 ```
 
 Extract pages 1-3 from the input PDF file and save as a new file in the same directory as the input file:
 
 ```bash
-pdf_snipper.py --start_page 1 --end_page 3 --input input.pdf
+python pdf_snipper --start_page 1 --end_page 3 --input input.pdf
 ```
 ## Additional Features
 
