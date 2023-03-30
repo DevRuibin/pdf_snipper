@@ -10,3 +10,15 @@ def check_output_file(output_file):
         overwrite = input()
         if overwrite.lower() != 'y':
             Handler.handle_error("Aborting. No changes were made.")
+
+
+def write_output_file(output, output_file):
+    # write output file
+    with open(output_file, "wb") as outputStream:
+        output.write(outputStream)
+        Handler.handle_info("Output file saved to {}".format(output_file))
+
+
+def check_output_file_and_write_output_file(output, output_file):
+    check_output_file(output_file)
+    write_output_file(output, output_file)
