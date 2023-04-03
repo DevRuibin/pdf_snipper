@@ -47,7 +47,9 @@ PDF Snipper can be extended to include additional features, such as:
 4. Add watermarks: allow users to add watermarks to a PDF file.
 5. Extract text: allow users to extract text from a PDF file.
 6. OCR: use optical character recognition (OCR) to recognize text in scanned PDFs.
-7. Command-line options for more customization: add more command-line options to allow users to customize the output file name, page size, and other properties.
+7. Command-line options for more customization: add more command-line options to allow users to customize the output file name, page size, and other
+properties.
+8. Format convertor: Convert file in other format to a PDF file
 
 ## License
 
