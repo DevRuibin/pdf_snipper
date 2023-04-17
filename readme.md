@@ -1,10 +1,10 @@
 # PDF Snipper
 
-PDF Snipper is not only a snipper. It is a command-line tool that offers a range of features for manipulating PDF files. The tool was initially designed to extract a range of pages from a PDF file and save them as a new file, but it is becoming a tool box. You can call it PDF commander. The tool allows users to extract a range of pages from a PDF file, merge multiple PDF files into one, read bookmarks to a PDF file, and more.
+PDF Snipper is not only a snipper. It is a command-line tool that offers a range of features for manipulating PDF files. The tool was initially designed to extract a range of pages from a PDF file and save them as a new file, but it is becoming a tool box. You can call it PDF commander. The tool allows users to extract a range of pages from a PDF file, merge multiple PDF files into one, bookmark operations, and more.
 
 ## Installation
 
-To install PDF Snipper, see the [`install.sh`](https://chat.openai.com/install.sh) file.
+To install PDF Snipper, see the [`install.sh`](install.sh) file.
 
 ## Usage
 
